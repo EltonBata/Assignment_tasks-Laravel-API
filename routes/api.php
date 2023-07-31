@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1')
     ->group(function () {
         Route::apiResource('/admin', AdministradorController::class)
-        ->except(['update'])
         ->names('admin');
     });
 

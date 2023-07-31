@@ -26,19 +26,19 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: pacocha.lelah@example.org
+        example: reinger.chanel@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: Fd4Rs3CZ
+        example: "g'}ML#$zv"
         type: string
         custom: []
     cleanBodyParameters:
-      email: pacocha.lelah@example.org
-      password: Fd4Rs3CZ
+      email: reinger.chanel@example.net
+      password: "g'}ML#$zv"
     fileParameters: []
     responses: []
     responseFields: []
@@ -132,19 +132,19 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: illum
+        example: illo
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: et
+        example: provident
         type: string
         custom: []
     cleanBodyParameters:
-      token: illum
-      password: et
+      token: illo
+      password: provident
     fileParameters: []
     responses: []
     responseFields: []
@@ -178,67 +178,67 @@ endpoints:
         name: nome
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: otlesjkczancgxfqu
+        example: ozqjxrreongxhgzag
         type: string
         custom: []
       apelido:
         name: apelido
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: btpnviwrrm
+        example: uemfmfffmvlq
         type: string
         custom: []
       data_nascimento:
         name: data_nascimento
         description: 'Must be a valid date.'
         required: true
-        example: '2023-07-31T06:49:30'
+        example: '2023-07-31T07:05:10'
         type: string
         custom: []
       endereco:
         name: endereco
         description: 'Must not be greater than 512 characters.'
         required: true
-        example: zhrcjkdjngjzpusuevp
+        example: fhzgvzpgwhfmuzbbhgjhiam
         type: string
         custom: []
       telefone:
         name: telefone
         description: 'Must be at least 9 characters.'
         required: true
-        example: jlpozbrpcekeysmsvtkjmoeuljrriqhcsahyopplbrecmoapsvqbiaifshnadhzafj
+        example: vripsgppbanpg
         type: string
         custom: []
       role_id:
         name: role_id
         description: ''
         required: true
-        example: 957573.0128012
+        example: 2.9
         type: number
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: arnaldo37@example.com
+        example: nklein@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 'xH!?0s/q1.f7;jy'
+        example: 'V#>_V!qI'
         type: string
         custom: []
     cleanBodyParameters:
-      nome: otlesjkczancgxfqu
-      apelido: btpnviwrrm
-      data_nascimento: '2023-07-31T06:49:30'
-      endereco: zhrcjkdjngjzpusuevp
-      telefone: jlpozbrpcekeysmsvtkjmoeuljrriqhcsahyopplbrecmoapsvqbiaifshnadhzafj
-      role_id: 957573.0128012
-      email: arnaldo37@example.com
-      password: 'xH!?0s/q1.f7;jy'
+      nome: ozqjxrreongxhgzag
+      apelido: uemfmfffmvlq
+      data_nascimento: '2023-07-31T07:05:10'
+      endereco: fhzgvzpgwhfmuzbbhgjhiam
+      telefone: vripsgppbanpg
+      role_id: 2.9
+      email: nklein@example.com
+      password: 'V#>_V!qI'
     fileParameters: []
     responses: []
     responseFields: []
@@ -268,19 +268,19 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: nam
+        example: facilis
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: rerum
+        example: suscipit
         type: string
         custom: []
     cleanUrlParameters:
-      id: nam
-      hash: rerum
+      id: facilis
+      hash: suscipit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -294,7 +294,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
-          set-cookie: 'a_tasks_session=eyJpdiI6ImNFQzc2U3NBdWF0RXlhVzVheGZCeWc9PSIsInZhbHVlIjoiWEM0ZEJMUytyMTVpR3V6QlJxdmw0aU9JUVVsUUFIZWFMeVV3M0pTZnNYR2wxeTdzUHVTREczcHVpdUxVakhsbzVlWTh3bzZEcldVMDlrTGQyS0ZaOG9EOXpjQjBJamxmbE1Xak8xTjAxWU1WNFBTcU41Y0JnM1NpRk5VZG56ODEiLCJtYWMiOiI0Y2I4ZGViMTU2OGYwOWJkNTY3NTNkMmViNjA5ZTgwOWU4ZTJhNjIyYTBiYjBhOWU4MzRkMDYxY2ZlMzdmNDA4IiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 08:49:30 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'a_tasks_session=eyJpdiI6IjNjYVpMNFFETDNodHBOOEVaNzMrMVE9PSIsInZhbHVlIjoicy9SL01xM2NMMFNnZGgzcjBHNVZlWlFOalFkQzREUmdoSXU0YUtOT0labGt0L1VhZ0sveTMrNEVzVGwvV29pb3BndGIzc0ZmRVMzbUVrOGNMS2ZyUmxrME5TOHgxajllcWJodEJxcS9oMHJLaEtGUW9iN040b0JVRUQ0K0UzcDAiLCJtYWMiOiI5ODEyYTYzZWUyYWRlYjk3YTBiMDFhYmM3NGUyNDNlZWJkYTA2N2QzMGM3YWNiZTFjMTI0MDA5NGVlYTc3ODBjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -394,7 +394,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
-          set-cookie: 'a_tasks_session=eyJpdiI6InN3bllDTlN0cE5oRFN2aFNINjJDTUE9PSIsInZhbHVlIjoiQjVuMmcyc0VZS2lyazh2ZFNaNmFNQXQ4RUpaMFFVTWRHNUVCRHM2RVQ3dlBhOW9qTDAzWC9ZNENiSlk2RGxrMVhnQjJIRHFROUpENHlDV1czY3NpQXpLTFBkcTNCNmh3VlZlMUxQMEdoUkM5TnFyTE5OOFV1TFdNZFZQYUhqblUiLCJtYWMiOiJjMDA1ZjhkNDQ5M2M5YTE4NjZkYjhhYWUxNjU2ZmJiYzBjZmMxZTA5NTJhZmM3MzY2NzMyNTVkNDk1MGIwN2QxIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 08:49:30 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'a_tasks_session=eyJpdiI6Ikdmc0JjcHBtdXhRcWxTeWNydXpvRFE9PSIsInZhbHVlIjoiVlc1Wm5tcEJta0wvNHZBU2JGYllVVzZ3MWJ6SlVWbmxBVGtZWStja1k4ZTR4VWdaOHZhMWdDajQxMEdacGRDWVBaSUJsMS9HaWFGWGltbWo4S0pXb2xyUjVtb1d4S3RwclFoc3dCa3NrREk5U1NxQ3RyRjNvTFJyMDQweEZFMXgiLCJtYWMiOiJmYTNlOWE0NzA4Y2NiYTlkNjdkY2Q0OGIzZTBjMzQ3YWYyYTExM2MzMzQ3NTA1OGVlZTg2ZjVlMTE1YzliZGJjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -421,134 +421,6 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/v1/admin
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of the resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"current_page":1,"data":[{"id":1,"user_id":1,"nome":"Elton Vagner","apelido":"Bata","data_nascimento":"2002-12-14","endereco":"Maputo, Cidade da Matola, Intaka","email":"elton@gmail.com","telefone":"879030182","created_at":"2023-07-29T15:47:17.000000Z","updated_at":"2023-07-29T15:47:17.000000Z"},{"id":3,"user_id":12,"nome":"Ivan","apelido":"Bata","data_nascimento":"2000-01-08","endereco":"Intaka","email":"teste@gmail.com","telefone":"888888888888","created_at":"2023-07-30T12:34:28.000000Z","updated_at":"2023-07-30T17:13:40.000000Z"},{"id":8,"user_id":17,"nome":"Jafton","apelido":"Bata","data_nascimento":"2000-01-08","endereco":"Matola","email":"teste@yahoo.com","telefone":"888888899","created_at":"2023-07-31T06:12:52.000000Z","updated_at":"2023-07-31T06:12:52.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/v1\/admin?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/v1\/admin?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/v1\/admin?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/v1\/admin","per_page":5,"prev_page_url":null,"to":3,"total":3}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/v1/admin/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the admin.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    cleanUrlParameters:
-      id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '[]'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/v1/admin/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the admin.'
-        required: true
-        example: omnis
-        type: string
-        custom: []
-    cleanUrlParameters:
-      id: omnis
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

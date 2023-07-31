@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * @group Gestao de Administradores
+ */
 class AdministradorController extends Controller
 {
 
@@ -19,7 +22,10 @@ class AdministradorController extends Controller
     ) {
     }
     /**
-     * Display a listing of the resource.
+     * Exibe uma lista dos administradores cadastrados.
+     * 
+     * @queryParam page_size int Tamanho da lista por pagina. Padrao: 20
+     * @queryParam page int pagina.
      */
     public function index()
     {

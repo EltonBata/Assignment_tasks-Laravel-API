@@ -26,11 +26,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: pacocha.lelah@example.org
+                  example: reinger.chanel@example.net
                 password:
                   type: string
                   description: ''
-                  example: Fd4Rs3CZ
+                  example: "g'}ML#$zv"
               required:
                 - email
                 - password
@@ -74,11 +74,11 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: illum
+                  example: illo
                 password:
                   type: string
                   description: ''
-                  example: et
+                  example: provident
               required:
                 - token
                 - password
@@ -102,35 +102,35 @@ paths:
                 nome:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: otlesjkczancgxfqu
+                  example: ozqjxrreongxhgzag
                 apelido:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: btpnviwrrm
+                  example: uemfmfffmvlq
                 data_nascimento:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-07-31T06:49:30'
+                  example: '2023-07-31T07:05:10'
                 endereco:
                   type: string
                   description: 'Must not be greater than 512 characters.'
-                  example: zhrcjkdjngjzpusuevp
+                  example: fhzgvzpgwhfmuzbbhgjhiam
                 telefone:
                   type: string
                   description: 'Must be at least 9 characters.'
-                  example: jlpozbrpcekeysmsvtkjmoeuljrriqhcsahyopplbrecmoapsvqbiaifshnadhzafj
+                  example: vripsgppbanpg
                 role_id:
                   type: number
                   description: ''
-                  example: 957573.0128012
+                  example: 2.9
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: arnaldo37@example.com
+                  example: nklein@example.com
                 password:
                   type: string
                   description: ''
-                  example: 'xH!?0s/q1.f7;jy'
+                  example: 'V#>_V!qI'
               required:
                 - nome
                 - apelido
@@ -168,7 +168,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify.'
-        example: nam
+        example: facilis
         required: true
         schema:
           type: string
@@ -176,7 +176,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: rerum
+        example: suscipit
         required: true
         schema:
           type: string
@@ -232,248 +232,6 @@ paths:
       tags:
         - Endpoints
       security: []
-  /api/v1/admin:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  current_page: 1
-                  data:
-                    -
-                      id: 1
-                      user_id: 1
-                      nome: 'Elton Vagner'
-                      apelido: Bata
-                      data_nascimento: '2002-12-14'
-                      endereco: 'Maputo, Cidade da Matola, Intaka'
-                      email: elton@gmail.com
-                      telefone: '879030182'
-                      created_at: '2023-07-29T15:47:17.000000Z'
-                      updated_at: '2023-07-29T15:47:17.000000Z'
-                    -
-                      id: 3
-                      user_id: 12
-                      nome: Ivan
-                      apelido: Bata
-                      data_nascimento: '2000-01-08'
-                      endereco: Intaka
-                      email: teste@gmail.com
-                      telefone: '888888888888'
-                      created_at: '2023-07-30T12:34:28.000000Z'
-                      updated_at: '2023-07-30T17:13:40.000000Z'
-                    -
-                      id: 8
-                      user_id: 17
-                      nome: Jafton
-                      apelido: Bata
-                      data_nascimento: '2000-01-08'
-                      endereco: Matola
-                      email: teste@yahoo.com
-                      telefone: '888888899'
-                      created_at: '2023-07-31T06:12:52.000000Z'
-                      updated_at: '2023-07-31T06:12:52.000000Z'
-                  first_page_url: 'http://localhost/api/v1/admin?page=1'
-                  from: 1
-                  last_page: 1
-                  last_page_url: 'http://localhost/api/v1/admin?page=1'
-                  links:
-                    -
-                      url: null
-                      label: '&laquo; Previous'
-                      active: false
-                    -
-                      url: 'http://localhost/api/v1/admin?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: null
-                      label: 'Next &raquo;'
-                      active: false
-                  next_page_url: null
-                  path: 'http://localhost/api/v1/admin'
-                  per_page: 5
-                  prev_page_url: null
-                  to: 3
-                  total: 3
-                properties:
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        user_id: 1
-                        nome: 'Elton Vagner'
-                        apelido: Bata
-                        data_nascimento: '2002-12-14'
-                        endereco: 'Maputo, Cidade da Matola, Intaka'
-                        email: elton@gmail.com
-                        telefone: '879030182'
-                        created_at: '2023-07-29T15:47:17.000000Z'
-                        updated_at: '2023-07-29T15:47:17.000000Z'
-                      -
-                        id: 3
-                        user_id: 12
-                        nome: Ivan
-                        apelido: Bata
-                        data_nascimento: '2000-01-08'
-                        endereco: Intaka
-                        email: teste@gmail.com
-                        telefone: '888888888888'
-                        created_at: '2023-07-30T12:34:28.000000Z'
-                        updated_at: '2023-07-30T17:13:40.000000Z'
-                      -
-                        id: 8
-                        user_id: 17
-                        nome: Jafton
-                        apelido: Bata
-                        data_nascimento: '2000-01-08'
-                        endereco: Matola
-                        email: teste@yahoo.com
-                        telefone: '888888899'
-                        created_at: '2023-07-31T06:12:52.000000Z'
-                        updated_at: '2023-07-31T06:12:52.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        user_id:
-                          type: integer
-                          example: 1
-                        nome:
-                          type: string
-                          example: 'Elton Vagner'
-                        apelido:
-                          type: string
-                          example: Bata
-                        data_nascimento:
-                          type: string
-                          example: '2002-12-14'
-                        endereco:
-                          type: string
-                          example: 'Maputo, Cidade da Matola, Intaka'
-                        email:
-                          type: string
-                          example: elton@gmail.com
-                        telefone:
-                          type: string
-                          example: '879030182'
-                        created_at:
-                          type: string
-                          example: '2023-07-29T15:47:17.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2023-07-29T15:47:17.000000Z'
-                  first_page_url:
-                    type: string
-                    example: 'http://localhost/api/v1/admin?page=1'
-                  from:
-                    type: integer
-                    example: 1
-                  last_page:
-                    type: integer
-                    example: 1
-                  last_page_url:
-                    type: string
-                    example: 'http://localhost/api/v1/admin?page=1'
-                  links:
-                    type: array
-                    example:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://localhost/api/v1/admin?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: 'Next &raquo;'
-                        active: false
-                    items:
-                      type: object
-                      properties:
-                        url:
-                          type: string
-                          example: null
-                        label:
-                          type: string
-                          example: '&laquo; Previous'
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
-                    type: string
-                    example: null
-                  path:
-                    type: string
-                    example: 'http://localhost/api/v1/admin'
-                  per_page:
-                    type: integer
-                    example: 5
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: integer
-                    example: 3
-                  total:
-                    type: integer
-                    example: 3
-      tags:
-        - Endpoints
-      security: []
-  '/api/v1/admin/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                example: []
-      tags:
-        - Endpoints
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the admin.'
-        example: 1
-        required: true
-        schema:
-          type: integer
   /api/user:
     get:
       summary: ''
@@ -496,7 +254,182 @@ paths:
       tags:
         - Endpoints
       security: []
+  /api/v1/admin:
+    get:
+      summary: 'Exibe uma lista dos administradores cadastrados.'
+      operationId: exibeUmaListaDosAdministradoresCadastrados
+      description: ''
+      parameters:
+        -
+          in: query
+          name: page_size
+          description: 'por pagina. Padrao: 20'
+          example: 16
+          required: false
+          schema:
+            type: integer
+            description: 'por pagina. Padrao: 20'
+            example: 16
+        -
+          in: query
+          name: page
+          description: pagina.
+          example: 3
+          required: false
+          schema:
+            type: integer
+            description: pagina.
+            example: 3
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  current_page: 3
+                  data: []
+                  first_page_url: 'http://localhost/api/v1/admin?page=1'
+                  from: null
+                  last_page: 1
+                  last_page_url: 'http://localhost/api/v1/admin?page=1'
+                  links:
+                    -
+                      url: 'http://localhost/api/v1/admin?page=2'
+                      label: '&laquo; Previous'
+                      active: false
+                    -
+                      url: 'http://localhost/api/v1/admin?page=1'
+                      label: '1'
+                      active: false
+                    -
+                      url: null
+                      label: 'Next &raquo;'
+                      active: false
+                  next_page_url: null
+                  path: 'http://localhost/api/v1/admin'
+                  per_page: 16
+                  prev_page_url: 'http://localhost/api/v1/admin?page=2'
+                  to: null
+                  total: 3
+                properties:
+                  current_page:
+                    type: integer
+                    example: 3
+                  data:
+                    type: array
+                    example: []
+                  first_page_url:
+                    type: string
+                    example: 'http://localhost/api/v1/admin?page=1'
+                  from:
+                    type: string
+                    example: null
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://localhost/api/v1/admin?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: 'http://localhost/api/v1/admin?page=2'
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/admin?page=1'
+                        label: '1'
+                        active: false
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: 'http://localhost/api/v1/admin?page=2'
+                        label:
+                          type: string
+                          example: '&laquo; Previous'
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://localhost/api/v1/admin'
+                  per_page:
+                    type: integer
+                    example: 16
+                  prev_page_url:
+                    type: string
+                    example: 'http://localhost/api/v1/admin?page=2'
+                  to:
+                    type: string
+                    example: null
+                  total:
+                    type: integer
+                    example: 3
+      tags:
+        - 'Gestao de Administradores'
+      security: []
+  '/api/v1/admin/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - 'Gestao de Administradores'
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Gestao de Administradores'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Gestao de Administradores'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the admin.'
+        example: 1
+        required: true
+        schema:
+          type: integer
 tags:
   -
     name: Endpoints
+    description: ''
+  -
+    name: 'Gestao de Administradores'
     description: ''

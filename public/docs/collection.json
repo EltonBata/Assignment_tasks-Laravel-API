@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "A-Tasks",
-        "_postman_id": "b94179ce-28b7-4fe1-9bb1-551cbe047f21",
+        "_postman_id": "641cd0b2-7960-4780-a4b9-572afb0fde09",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"pacocha.lelah@example.org\",\"password\":\"Fd4Rs3CZ\"}"
+                            "raw": "{\"email\":\"reinger.chanel@example.net\",\"password\":\"g'}ML#$zv\"}"
                         },
                         "description": "",
                         "auth": {
@@ -128,7 +128,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"token\":\"illum\",\"password\":\"et\"}"
+                            "raw": "{\"token\":\"illo\",\"password\":\"provident\"}"
                         },
                         "description": "",
                         "auth": {
@@ -159,7 +159,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"otlesjkczancgxfqu\",\"apelido\":\"btpnviwrrm\",\"data_nascimento\":\"2023-07-31T06:49:30\",\"endereco\":\"zhrcjkdjngjzpusuevp\",\"telefone\":\"jlpozbrpcekeysmsvtkjmoeuljrriqhcsahyopplbrecmoapsvqbiaifshnadhzafj\",\"role_id\":957573.0128012,\"email\":\"arnaldo37@example.com\",\"password\":\"xH!?0s\\\/q1.f7;jy\"}"
+                            "raw": "{\"nome\":\"ozqjxrreongxhgzag\",\"apelido\":\"uemfmfffmvlq\",\"data_nascimento\":\"2023-07-31T07:05:10\",\"endereco\":\"fhzgvzpgwhfmuzbbhgjhiam\",\"telefone\":\"vripsgppbanpg\",\"role_id\":2.9,\"email\":\"nklein@example.com\",\"password\":\"V#>_V!qI\"}"
                         },
                         "description": "",
                         "auth": {
@@ -180,13 +180,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nam",
+                                    "value": "facilis",
                                     "description": "The ID of the verify."
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "rerum",
+                                    "value": "suscipit",
                                     "description": ""
                                 }
                             ]
@@ -225,7 +225,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "a_tasks_session=eyJpdiI6ImNFQzc2U3NBdWF0RXlhVzVheGZCeWc9PSIsInZhbHVlIjoiWEM0ZEJMUytyMTVpR3V6QlJxdmw0aU9JUVVsUUFIZWFMeVV3M0pTZnNYR2wxeTdzUHVTREczcHVpdUxVakhsbzVlWTh3bzZEcldVMDlrTGQyS0ZaOG9EOXpjQjBJamxmbE1Xak8xTjAxWU1WNFBTcU41Y0JnM1NpRk5VZG56ODEiLCJtYWMiOiI0Y2I4ZGViMTU2OGYwOWJkNTY3NTNkMmViNjA5ZTgwOWU4ZTJhNjIyYTBiYjBhOWU4MzRkMDYxY2ZlMzdmNDA4IiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 08:49:30 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "a_tasks_session=eyJpdiI6IjNjYVpMNFFETDNodHBOOEVaNzMrMVE9PSIsInZhbHVlIjoicy9SL01xM2NMMFNnZGgzcjBHNVZlWlFOalFkQzREUmdoSXU0YUtOT0labGt0L1VhZ0sveTMrNEVzVGwvV29pb3BndGIzc0ZmRVMzbUVrOGNMS2ZyUmxrME5TOHgxajllcWJodEJxcS9oMHJLaEtGUW9iN040b0JVRUQ0K0UzcDAiLCJtYWMiOiI5ODEyYTYzZWUyYWRlYjk3YTBiMDFhYmM3NGUyNDNlZWJkYTA2N2QzMGM3YWNiZTFjMTI0MDA5NGVlYTc3ODBjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 401,
@@ -333,7 +333,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "a_tasks_session=eyJpdiI6InN3bllDTlN0cE5oRFN2aFNINjJDTUE9PSIsInZhbHVlIjoiQjVuMmcyc0VZS2lyazh2ZFNaNmFNQXQ4RUpaMFFVTWRHNUVCRHM2RVQ3dlBhOW9qTDAzWC9ZNENiSlk2RGxrMVhnQjJIRHFROUpENHlDV1czY3NpQXpLTFBkcTNCNmh3VlZlMUxQMEdoUkM5TnFyTE5OOFV1TFdNZFZQYUhqblUiLCJtYWMiOiJjMDA1ZjhkNDQ5M2M5YTE4NjZkYjhhYWUxNjU2ZmJiYzBjZmMxZTA5NTJhZmM3MzY2NzMyNTVkNDk1MGIwN2QxIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 08:49:30 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "a_tasks_session=eyJpdiI6Ikdmc0JjcHBtdXhRcWxTeWNydXpvRFE9PSIsInZhbHVlIjoiVlc1Wm5tcEJta0wvNHZBU2JGYllVVzZ3MWJ6SlVWbmxBVGtZWStja1k4ZTR4VWdaOHZhMWdDajQxMEdacGRDWVBaSUJsMS9HaWFGWGltbWo4S0pXb2xyUjVtb1d4S3RwclFoc3dCa3NrREk5U1NxQ3RyRjNvTFJyMDQweEZFMXgiLCJtYWMiOiJmYTNlOWE0NzA4Y2NiYTlkNjdkY2Q0OGIzZTBjMzQ3YWYyYTExM2MzMzQ3NTA1OGVlZTg2ZjVlMTE1YzliZGJjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 401,
@@ -352,162 +352,6 @@
                             "raw": "{{baseUrl}}\/api\/user\/confirm-password"
                         },
                         "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/admin",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/admin"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"current_page\":1,\"data\":[{\"id\":1,\"user_id\":1,\"nome\":\"Elton Vagner\",\"apelido\":\"Bata\",\"data_nascimento\":\"2002-12-14\",\"endereco\":\"Maputo, Cidade da Matola, Intaka\",\"email\":\"elton@gmail.com\",\"telefone\":\"879030182\",\"created_at\":\"2023-07-29T15:47:17.000000Z\",\"updated_at\":\"2023-07-29T15:47:17.000000Z\"},{\"id\":3,\"user_id\":12,\"nome\":\"Ivan\",\"apelido\":\"Bata\",\"data_nascimento\":\"2000-01-08\",\"endereco\":\"Intaka\",\"email\":\"teste@gmail.com\",\"telefone\":\"888888888888\",\"created_at\":\"2023-07-30T12:34:28.000000Z\",\"updated_at\":\"2023-07-30T17:13:40.000000Z\"},{\"id\":8,\"user_id\":17,\"nome\":\"Jafton\",\"apelido\":\"Bata\",\"data_nascimento\":\"2000-01-08\",\"endereco\":\"Matola\",\"email\":\"teste@yahoo.com\",\"telefone\":\"888888899\",\"created_at\":\"2023-07-31T06:12:52.000000Z\",\"updated_at\":\"2023-07-31T06:12:52.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin\",\"per_page\":5,\"prev_page_url\":null,\"to\":3,\"total\":3}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/admin\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/admin\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the admin."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "58"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "[]",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/admin\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/admin\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "omnis",
-                                    "description": "The ID of the admin."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -573,6 +417,217 @@
                             "name": ""
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Gestao de Administradores",
+            "description": "",
+            "item": [
+                {
+                    "name": "Exibe uma lista dos administradores cadastrados.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/admin",
+                            "query": [
+                                {
+                                    "key": "page_size",
+                                    "value": "16",
+                                    "description": "por pagina. Padrao: 20",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "3",
+                                    "description": "pagina.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/admin?page_size=16&page=3"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"current_page\":3,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=2\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin\",\"per_page\":16,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=2\",\"to\":null,\"total\":3}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/admin\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/admin\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the admin."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/admin\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/admin\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ullam",
+                                    "description": "The ID of the admin."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/admin\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/admin\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "fugiat",
+                                    "description": "The ID of the admin."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         }
