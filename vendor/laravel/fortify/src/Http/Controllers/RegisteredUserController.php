@@ -54,7 +54,7 @@ class RegisteredUserController extends Controller
     {
         event(new Registered($user = $creator->create($request->validated())));
 
-        $this->guard->login($user);
+        // $this->guard->login($user);
 
         return app(RegisterResponse::class);
     }
