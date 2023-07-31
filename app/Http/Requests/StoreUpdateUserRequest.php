@@ -18,10 +18,10 @@ class StoreUpdateUserRequest extends FormRequest
      * Determine if the user is authorized to make this request.
      */
 
-    public function __construct(
-        protected User $user
-    ) {
-    }
+    // public function __construct(
+    //     protected User $user
+    // ) {
+    // }
 
     public function authorize(): bool
     {
