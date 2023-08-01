@@ -26,11 +26,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: reinger.chanel@example.net
+                  example: demarco75@example.net
                 password:
                   type: string
                   description: ''
-                  example: "g'}ML#$zv"
+                  example: 'ytWN`I8"0hL'
               required:
                 - email
                 - password
@@ -74,11 +74,11 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: illo
+                  example: est
                 password:
                   type: string
                   description: ''
-                  example: provident
+                  example: et
               required:
                 - token
                 - password
@@ -102,35 +102,35 @@ paths:
                 nome:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ozqjxrreongxhgzag
+                  example: hulvhmfydbo
                 apelido:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: uemfmfffmvlq
+                  example: wrgtfnoo
                 data_nascimento:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-07-31T07:05:10'
+                  example: '2023-08-01T16:57:14'
                 endereco:
                   type: string
                   description: 'Must not be greater than 512 characters.'
-                  example: fhzgvzpgwhfmuzbbhgjhiam
+                  example: k
                 telefone:
                   type: string
                   description: 'Must be at least 9 characters.'
-                  example: vripsgppbanpg
+                  example: hudzebxjwwspyfraypgwensijojslvnpyfxtlgxoqbur
                 role_id:
-                  type: number
+                  type: string
                   description: ''
-                  example: 2.9
+                  example: facere
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: nklein@example.com
+                  example: dale.kub@example.org
                 password:
                   type: string
                   description: ''
-                  example: 'V#>_V!qI'
+                  example: "'fW?#FE`(GS"
               required:
                 - nome
                 - apelido
@@ -168,7 +168,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify.'
-        example: facilis
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -176,7 +176,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: suscipit
+        example: dolor
         required: true
         schema:
           type: string
@@ -189,6 +189,67 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+      security: []
+  /api/user/profile-information:
+    put:
+      summary: 'Actualizacao do Perfil do Usuario'
+      operationId: actualizacaoDoPerfilDoUsuario
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  description: 'Nome do Usuario.'
+                  example: 'Elton Vagner'
+                apelido:
+                  type: string
+                  description: 'Apelido do Usuario.'
+                  example: Bata
+                data_nascimento:
+                  type: date
+                  description: 'Data de nascimento do Usuario.'
+                  example: 2002/12/14
+                endereco:
+                  type: string
+                  description: 'Endereco do Usuario.'
+                  example: 'Maputo, Zimpeto'
+                telefone:
+                  type: string
+                  description: 'Numero de telefone do Usuario. Deve conter no minimo 9 caracteres.'
+                  example: '878473645'
+                role_id:
+                  type: array
+                  description: 'Array contendo os IDs dos roles do Usuario.'
+                  example:
+                    - est
+                  items:
+                    type: string
+                email:
+                  type: string
+                  description: 'Email do Usuario.'
+                  example: elton@gmail.com
+                password:
+                  type: string
+                  description: 'Password do Usuario. Deve conter no minimo 8 caracteres.'
+                  example: 1a2g3h4j5
+              required:
+                - nome
+                - apelido
+                - data_nascimento
+                - endereco
+                - telefone
+                - role_id
+                - email
+                - password
       security: []
   /api/user/password:
     put:
@@ -263,23 +324,23 @@ paths:
         -
           in: query
           name: page_size
-          description: 'por pagina. Padrao: 20'
-          example: 16
+          description: 'Tamanho da lista por pagina. Padrao: 20'
+          example: 17
           required: false
           schema:
             type: integer
-            description: 'por pagina. Padrao: 20'
-            example: 16
+            description: 'Tamanho da lista por pagina. Padrao: 20'
+            example: 17
         -
           in: query
           name: page
           description: pagina.
-          example: 3
+          example: 2
           required: false
           schema:
             type: integer
             description: pagina.
-            example: 3
+            example: 2
       responses:
         200:
           description: ''
@@ -288,7 +349,7 @@ paths:
               schema:
                 type: object
                 example:
-                  current_page: 3
+                  current_page: 2
                   data: []
                   first_page_url: 'http://localhost/api/v1/admin?page=1'
                   from: null
@@ -296,7 +357,7 @@ paths:
                   last_page_url: 'http://localhost/api/v1/admin?page=1'
                   links:
                     -
-                      url: 'http://localhost/api/v1/admin?page=2'
+                      url: 'http://localhost/api/v1/admin?page=1'
                       label: '&laquo; Previous'
                       active: false
                     -
@@ -309,14 +370,14 @@ paths:
                       active: false
                   next_page_url: null
                   path: 'http://localhost/api/v1/admin'
-                  per_page: 16
-                  prev_page_url: 'http://localhost/api/v1/admin?page=2'
+                  per_page: 17
+                  prev_page_url: 'http://localhost/api/v1/admin?page=1'
                   to: null
                   total: 3
                 properties:
                   current_page:
                     type: integer
-                    example: 3
+                    example: 2
                   data:
                     type: array
                     example: []
@@ -336,7 +397,7 @@ paths:
                     type: array
                     example:
                       -
-                        url: 'http://localhost/api/v1/admin?page=2'
+                        url: 'http://localhost/api/v1/admin?page=1'
                         label: '&laquo; Previous'
                         active: false
                       -
@@ -352,7 +413,7 @@ paths:
                       properties:
                         url:
                           type: string
-                          example: 'http://localhost/api/v1/admin?page=2'
+                          example: 'http://localhost/api/v1/admin?page=1'
                         label:
                           type: string
                           example: '&laquo; Previous'
@@ -367,10 +428,10 @@ paths:
                     example: 'http://localhost/api/v1/admin'
                   per_page:
                     type: integer
-                    example: 16
+                    example: 17
                   prev_page_url:
                     type: string
-                    example: 'http://localhost/api/v1/admin?page=2'
+                    example: 'http://localhost/api/v1/admin?page=1'
                   to:
                     type: string
                     example: null

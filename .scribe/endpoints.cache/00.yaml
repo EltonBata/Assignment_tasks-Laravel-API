@@ -28,19 +28,19 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: reinger.chanel@example.net
+        example: demarco75@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: "g'}ML#$zv"
+        example: 'ytWN`I8"0hL'
         type: string
         custom: []
     cleanBodyParameters:
-      email: reinger.chanel@example.net
-      password: "g'}ML#$zv"
+      email: demarco75@example.net
+      password: 'ytWN`I8"0hL'
     fileParameters: []
     responses: []
     responseFields: []
@@ -134,19 +134,19 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: illo
+        example: est
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: provident
+        example: et
         type: string
         custom: []
     cleanBodyParameters:
-      token: illo
-      password: provident
+      token: est
+      password: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -180,67 +180,67 @@ endpoints:
         name: nome
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ozqjxrreongxhgzag
+        example: hulvhmfydbo
         type: string
         custom: []
       apelido:
         name: apelido
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: uemfmfffmvlq
+        example: wrgtfnoo
         type: string
         custom: []
       data_nascimento:
         name: data_nascimento
         description: 'Must be a valid date.'
         required: true
-        example: '2023-07-31T07:05:10'
+        example: '2023-08-01T16:57:14'
         type: string
         custom: []
       endereco:
         name: endereco
         description: 'Must not be greater than 512 characters.'
         required: true
-        example: fhzgvzpgwhfmuzbbhgjhiam
+        example: k
         type: string
         custom: []
       telefone:
         name: telefone
         description: 'Must be at least 9 characters.'
         required: true
-        example: vripsgppbanpg
+        example: hudzebxjwwspyfraypgwensijojslvnpyfxtlgxoqbur
         type: string
         custom: []
       role_id:
         name: role_id
         description: ''
         required: true
-        example: 2.9
-        type: number
+        example: facere
+        type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: nklein@example.com
+        example: dale.kub@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 'V#>_V!qI'
+        example: "'fW?#FE`(GS"
         type: string
         custom: []
     cleanBodyParameters:
-      nome: ozqjxrreongxhgzag
-      apelido: uemfmfffmvlq
-      data_nascimento: '2023-07-31T07:05:10'
-      endereco: fhzgvzpgwhfmuzbbhgjhiam
-      telefone: vripsgppbanpg
-      role_id: 2.9
-      email: nklein@example.com
-      password: 'V#>_V!qI'
+      nome: hulvhmfydbo
+      apelido: wrgtfnoo
+      data_nascimento: '2023-08-01T16:57:14'
+      endereco: k
+      telefone: hudzebxjwwspyfraypgwensijojslvnpyfxtlgxoqbur
+      role_id: facere
+      email: dale.kub@example.org
+      password: "'fW?#FE`(GS"
     fileParameters: []
     responses: []
     responseFields: []
@@ -270,19 +270,19 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: facilis
+        example: voluptatem
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: suscipit
+        example: dolor
         type: string
         custom: []
     cleanUrlParameters:
-      id: facilis
-      hash: suscipit
+      id: voluptatem
+      hash: dolor
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -296,7 +296,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
-          set-cookie: 'a_tasks_session=eyJpdiI6IjNjYVpMNFFETDNodHBOOEVaNzMrMVE9PSIsInZhbHVlIjoicy9SL01xM2NMMFNnZGgzcjBHNVZlWlFOalFkQzREUmdoSXU0YUtOT0labGt0L1VhZ0sveTMrNEVzVGwvV29pb3BndGIzc0ZmRVMzbUVrOGNMS2ZyUmxrME5TOHgxajllcWJodEJxcS9oMHJLaEtGUW9iN040b0JVRUQ0K0UzcDAiLCJtYWMiOiI5ODEyYTYzZWUyYWRlYjk3YTBiMDFhYmM3NGUyNDNlZWJkYTA2N2QzMGM3YWNiZTFjMTI0MDA5NGVlYTc3ODBjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'a_tasks_session=eyJpdiI6IkI1ZW5HSDNJbVhKZ2RLUFFlbmR2d2c9PSIsInZhbHVlIjoiSjJpYmV5VGd4NFM2QlBBemF1dHhLVjlISGFIQ29oZGZOWjhNcWNkc2dHWTkwaHNGQmYrZHh1WFh6S1JoRGpNcStDNnlFdk5FMmR6WnVZMEZwWWZNQXUzdjFnNnpRRkVkSk5RekQ0ZnAxZmxkaUlYYzdvWmtHaXlzdFZNQldKMXgiLCJtYWMiOiI0YmM4NmRiNzE0MDdjYjFlMTQ4MGZiMzFhMjU5NDc5OGU5NzliMjliN2NiMzU5ZTkxYjAzMjVlYmQwOWQyMTNhIiwidGFnIjoiIn0%3D; expires=Tue, 01 Aug 2023 18:57:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []
@@ -327,6 +327,102 @@ endpoints:
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/user/profile-information
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Actualizacao do Perfil do Usuario'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      nome:
+        name: nome
+        description: 'Nome do Usuario.'
+        required: true
+        example: 'Elton Vagner'
+        type: string
+        custom: []
+      apelido:
+        name: apelido
+        description: 'Apelido do Usuario.'
+        required: true
+        example: Bata
+        type: string
+        custom: []
+      data_nascimento:
+        name: data_nascimento
+        description: 'Data de nascimento do Usuario.'
+        required: true
+        example: 2002/12/14
+        type: date
+        custom: []
+      endereco:
+        name: endereco
+        description: 'Endereco do Usuario.'
+        required: true
+        example: 'Maputo, Zimpeto'
+        type: string
+        custom: []
+      telefone:
+        name: telefone
+        description: 'Numero de telefone do Usuario. Deve conter no minimo 9 caracteres.'
+        required: true
+        example: '878473645'
+        type: string
+        custom: []
+      role_id:
+        name: role_id
+        description: 'Array contendo os IDs dos roles do Usuario.'
+        required: true
+        example:
+          - est
+        type: 'string[]'
+        custom: []
+      email:
+        name: email
+        description: 'Email do Usuario.'
+        required: true
+        example: elton@gmail.com
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Password do Usuario. Deve conter no minimo 8 caracteres.'
+        required: true
+        example: 1a2g3h4j5
+        type: string
+        custom: []
+    cleanBodyParameters:
+      nome: 'Elton Vagner'
+      apelido: Bata
+      data_nascimento: 2002/12/14
+      endereco: 'Maputo, Zimpeto'
+      telefone: '878473645'
+      role_id:
+        - est
+      email: elton@gmail.com
+      password: 1a2g3h4j5
     fileParameters: []
     responses: []
     responseFields: []
@@ -396,7 +492,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
-          set-cookie: 'a_tasks_session=eyJpdiI6Ikdmc0JjcHBtdXhRcWxTeWNydXpvRFE9PSIsInZhbHVlIjoiVlc1Wm5tcEJta0wvNHZBU2JGYllVVzZ3MWJ6SlVWbmxBVGtZWStja1k4ZTR4VWdaOHZhMWdDajQxMEdacGRDWVBaSUJsMS9HaWFGWGltbWo4S0pXb2xyUjVtb1d4S3RwclFoc3dCa3NrREk5U1NxQ3RyRjNvTFJyMDQweEZFMXgiLCJtYWMiOiJmYTNlOWE0NzA4Y2NiYTlkNjdkY2Q0OGIzZTBjMzQ3YWYyYTExM2MzMzQ3NTA1OGVlZTg2ZjVlMTE1YzliZGJjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+          set-cookie: 'a_tasks_session=eyJpdiI6IjJaaTBBalorSGt2UWZIQjVQSVA3VGc9PSIsInZhbHVlIjoiNzREY0pVd3k1bWYxNWptenBqZGNRbnlTM3RYaHFVUElvT0plK25MTFlpTXhPclpheVlGdUFkRE8vOXF5dUVqNUNXQWF6eHZrM2NLRG9KRCtiM1k1d3pqVmorcWlpM3VXd29aVnNhNU91d3ZRdldtSUJRR3JiWWZETkswR2FhM2YiLCJtYWMiOiIxMzczZTRhYzc3OTVlYTUxOGIxODJlZDAxMjE4N2ZhMDNkYjU0MDg0YTFiOWI2MmE5YjQ5ZDIxMjU3Y2ZhZWQzIiwidGFnIjoiIn0%3D; expires=Tue, 01 Aug 2023 18:57:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []

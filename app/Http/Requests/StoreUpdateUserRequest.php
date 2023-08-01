@@ -18,18 +18,17 @@ class StoreUpdateUserRequest extends FormRequest
      * Determine if the user is authorized to make this request.
      */
 
-    // public function __construct(
-    //     protected User $user
-    // ) {
-    // }
-
     public function authorize(): bool
     {
         return true;
     }
 
+  
     /**
      * Get the validation rules that apply to the request.
+     * 
+     * @bodyParam nome string required. Nome do Usuario. Example: Elton Vagner
+     * @bodyParam apelido string required. Nome do Usuario. Example: Bata
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
@@ -41,7 +40,7 @@ class StoreUpdateUserRequest extends FormRequest
             'data_nascimento' => ['required', 'date'],
             'endereco' => ['required', 'max:512', 'string'],
             'telefone' => ['min:9', 'required', 'string'],
-            'role_id' => ['required', 'numeric', Rule::exists(Role::class, 'id')],
+            'role_id' => ['required', 'array', Rule::exists(Role::class, 'id')],
             'email' => [
                 'required',
                 'string',
@@ -57,7 +56,7 @@ class StoreUpdateUserRequest extends FormRequest
                 'required',
                 'string',
                 'email',
-                Rule::unique(User::class, 'email')->ignore($this->user->id),
+                Rule::unique(User::class, 'email')->ignore(auth()->user()),
             ];
 
             $rules['password'] = ['nullable'];

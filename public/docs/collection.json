@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "A-Tasks",
-        "_postman_id": "641cd0b2-7960-4780-a4b9-572afb0fde09",
+        "_postman_id": "769edfe9-821e-4c66-bb91-3864e7b63a74",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"reinger.chanel@example.net\",\"password\":\"g'}ML#$zv\"}"
+                            "raw": "{\"email\":\"demarco75@example.net\",\"password\":\"ytWN`I8\\\"0hL\"}"
                         },
                         "description": "",
                         "auth": {
@@ -128,7 +128,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"token\":\"illo\",\"password\":\"provident\"}"
+                            "raw": "{\"token\":\"est\",\"password\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -159,7 +159,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"ozqjxrreongxhgzag\",\"apelido\":\"uemfmfffmvlq\",\"data_nascimento\":\"2023-07-31T07:05:10\",\"endereco\":\"fhzgvzpgwhfmuzbbhgjhiam\",\"telefone\":\"vripsgppbanpg\",\"role_id\":2.9,\"email\":\"nklein@example.com\",\"password\":\"V#>_V!qI\"}"
+                            "raw": "{\"nome\":\"hulvhmfydbo\",\"apelido\":\"wrgtfnoo\",\"data_nascimento\":\"2023-08-01T16:57:14\",\"endereco\":\"k\",\"telefone\":\"hudzebxjwwspyfraypgwensijojslvnpyfxtlgxoqbur\",\"role_id\":\"facere\",\"email\":\"dale.kub@example.org\",\"password\":\"'fW?#FE`(GS\"}"
                         },
                         "description": "",
                         "auth": {
@@ -180,13 +180,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "facilis",
+                                    "value": "voluptatem",
                                     "description": "The ID of the verify."
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "suscipit",
+                                    "value": "dolor",
                                     "description": ""
                                 }
                             ]
@@ -225,7 +225,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "a_tasks_session=eyJpdiI6IjNjYVpMNFFETDNodHBOOEVaNzMrMVE9PSIsInZhbHVlIjoicy9SL01xM2NMMFNnZGgzcjBHNVZlWlFOalFkQzREUmdoSXU0YUtOT0labGt0L1VhZ0sveTMrNEVzVGwvV29pb3BndGIzc0ZmRVMzbUVrOGNMS2ZyUmxrME5TOHgxajllcWJodEJxcS9oMHJLaEtGUW9iN040b0JVRUQ0K0UzcDAiLCJtYWMiOiI5ODEyYTYzZWUyYWRlYjk3YTBiMDFhYmM3NGUyNDNlZWJkYTA2N2QzMGM3YWNiZTFjMTI0MDA5NGVlYTc3ODBjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "a_tasks_session=eyJpdiI6IkI1ZW5HSDNJbVhKZ2RLUFFlbmR2d2c9PSIsInZhbHVlIjoiSjJpYmV5VGd4NFM2QlBBemF1dHhLVjlISGFIQ29oZGZOWjhNcWNkc2dHWTkwaHNGQmYrZHh1WFh6S1JoRGpNcStDNnlFdk5FMmR6WnVZMEZwWWZNQXUzdjFnNnpRRkVkSk5RekQ0ZnAxZmxkaUlYYzdvWmtHaXlzdFZNQldKMXgiLCJtYWMiOiI0YmM4NmRiNzE0MDdjYjFlMTQ4MGZiMzFhMjU5NDc5OGU5NzliMjliN2NiMzU5ZTkxYjAzMjVlYmQwOWQyMTNhIiwidGFnIjoiIn0%3D; expires=Tue, 01 Aug 2023 18:57:14 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 401,
@@ -255,6 +255,37 @@
                             }
                         ],
                         "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizacao do Perfil do Usuario",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/profile-information",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/profile-information"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nome\":\"Elton Vagner\",\"apelido\":\"Bata\",\"data_nascimento\":\"2002\\\/12\\\/14\",\"endereco\":\"Maputo, Zimpeto\",\"telefone\":\"878473645\",\"role_id\":[\"est\"],\"email\":\"elton@gmail.com\",\"password\":\"1a2g3h4j5\"}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -333,7 +364,7 @@
                                 },
                                 {
                                     "key": "set-cookie",
-                                    "value": "a_tasks_session=eyJpdiI6Ikdmc0JjcHBtdXhRcWxTeWNydXpvRFE9PSIsInZhbHVlIjoiVlc1Wm5tcEJta0wvNHZBU2JGYllVVzZ3MWJ6SlVWbmxBVGtZWStja1k4ZTR4VWdaOHZhMWdDajQxMEdacGRDWVBaSUJsMS9HaWFGWGltbWo4S0pXb2xyUjVtb1d4S3RwclFoc3dCa3NrREk5U1NxQ3RyRjNvTFJyMDQweEZFMXgiLCJtYWMiOiJmYTNlOWE0NzA4Y2NiYTlkNjdkY2Q0OGIzZTBjMzQ3YWYyYTExM2MzMzQ3NTA1OGVlZTg2ZjVlMTE1YzliZGJjIiwidGFnIjoiIn0%3D; expires=Mon, 31 Jul 2023 09:05:10 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                    "value": "a_tasks_session=eyJpdiI6IjJaaTBBalorSGt2UWZIQjVQSVA3VGc9PSIsInZhbHVlIjoiNzREY0pVd3k1bWYxNWptenBqZGNRbnlTM3RYaHFVUElvT0plK25MTFlpTXhPclpheVlGdUFkRE8vOXF5dUVqNUNXQWF6eHZrM2NLRG9KRCtiM1k1d3pqVmorcWlpM3VXd29aVnNhNU91d3ZRdldtSUJRR3JiWWZETkswR2FhM2YiLCJtYWMiOiIxMzczZTRhYzc3OTVlYTUxOGIxODJlZDAxMjE4N2ZhMDNkYjU0MDg0YTFiOWI2MmE5YjQ5ZDIxMjU3Y2ZhZWQzIiwidGFnIjoiIn0%3D; expires=Tue, 01 Aug 2023 18:57:14 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
                                 }
                             ],
                             "code": 401,
@@ -433,18 +464,18 @@
                             "query": [
                                 {
                                     "key": "page_size",
-                                    "value": "16",
-                                    "description": "por pagina. Padrao: 20",
+                                    "value": "17",
+                                    "description": "Tamanho da lista por pagina. Padrao: 20",
                                     "disabled": false
                                 },
                                 {
                                     "key": "page",
-                                    "value": "3",
+                                    "value": "2",
                                     "description": "pagina.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/v1\/admin?page_size=16&page=3"
+                            "raw": "{{baseUrl}}\/api\/v1\/admin?page_size=17&page=2"
                         },
                         "method": "GET",
                         "header": [
@@ -480,7 +511,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "57"
+                                    "value": "59"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -488,7 +519,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"current_page\":3,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=2\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin\",\"per_page\":16,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=2\",\"to\":null,\"total\":3}",
+                            "body": "{\"current_page\":2,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin\",\"per_page\":17,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/admin?page=1\",\"to\":null,\"total\":3}",
                             "name": ""
                         }
                     ]
@@ -544,7 +575,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "56"
+                                    "value": "58"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -569,7 +600,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ullam",
+                                    "value": "recusandae",
                                     "description": "The ID of the admin."
                                 }
                             ]

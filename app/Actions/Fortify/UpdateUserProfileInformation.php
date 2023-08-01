@@ -2,12 +2,10 @@
 
 namespace App\Actions\Fortify;
 
-use App\Http\Requests\StoreUpdateUserRequest;
+
 use App\Models\User;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
 
 class UpdateUserProfileInformation implements UpdatesUserProfileInformation
@@ -19,6 +17,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
      */
     public function update(User $user, array $input): void
     {
+
         if (
             $input['email'] !== $user->email &&
             $user instanceof MustVerifyEmail
@@ -26,16 +25,40 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             $this->updateVerifiedUser($user, $input);
         } else {
 
-            DB::transaction(function () use($user, $input) {
+            DB::transaction(function () use ($user, $input) {
 
                 if ($user->isAdmin()) {
                     $admin = $user->administrador();
 
-                    $admin->update($input);
+                    $roles = $user->roles();
+
+                    $roles->sync((array)$input['role_id']);
+
+                    $admin->update([
+                        'nome' => $input['nome'],
+                        'apelido' => $input['apelido'],
+                        'data_nascimento' => $input['data_nascimento'],
+                        'endereco' => $input['endereco'],
+                        'telefone' => $input['telefone'],
+                        'email' => $input['email'],
+                        'user_id' => $user->id,
+                    ]);
                 } else {
                     $func = $user->funcionario();
-                    
-                    $func->update($input);
+
+                    $roles = $user->roles();
+
+                    $roles->sync((array)$input['role_id']);
+
+                    $func->update([
+                        'nome' => $input['nome'],
+                        'apelido' => $input['apelido'],
+                        'data_nascimento' => $input['data_nascimento'],
+                        'endereco' => $input['endereco'],
+                        'telefone' => $input['telefone'],
+                        'email' => $input['email'],
+                        'user_id' => $user->id,
+                    ]);
                 }
 
                 $user->forceFill([
@@ -54,23 +77,44 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     protected function updateVerifiedUser(User $user, array $input): void
     {
 
-
         DB::transaction(function () use ($user, $input) {
-
 
             if ($user->isAdmin()) {
                 $admin = $user->administrador();
 
-                $admin->update($input);
-            }else{
+                $roles = $user->roles();
+
+                $roles->sync((array)$input['role_id']);
+
+                $admin->update([
+                    'nome' => $input['nome'],
+                    'apelido' => $input['apelido'],
+                    'data_nascimento' => $input['data_nascimento'],
+                    'endereco' => $input['endereco'],
+                    'telefone' => $input['telefone'],
+                    'email' => $input['email'],
+                    'user_id' => $user->id,
+                ]);
+            } else {
                 $func = $user->funcionario();
 
-                $func->update($input);
+                $roles = $user->roles();
+
+                $roles->sync((array)$input['role_id']);
+
+                $func->update([
+                    'nome' => $input['nome'],
+                    'apelido' => $input['apelido'],
+                    'data_nascimento' => $input['data_nascimento'],
+                    'endereco' => $input['endereco'],
+                    'telefone' => $input['telefone'],
+                    'email' => $input['email'],
+                    'user_id' => $user->id,
+                ]);
             }
 
             $user->forceFill([
                 'email' => $input['email'],
-                'email_verified_at' => null,
             ])->save();
 
             $user->sendEmailVerificationNotification();
