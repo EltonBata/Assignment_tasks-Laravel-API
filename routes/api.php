@@ -18,11 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['web', 'auth'])->group(function () {
 
-    Route::apiResource('/admins', AdministradorController::class)
-        ->except(['store', 'update'])
-        ->names('admins');
-
     Route::apiResource('/funcs', FuncionarioController::class)
+        ->except('store')
         ->names('funcs');
 
 });

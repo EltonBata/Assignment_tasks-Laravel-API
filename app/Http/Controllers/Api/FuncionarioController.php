@@ -6,6 +6,7 @@ use App\Contracts\Services\FuncionarioContract;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateUserRequest;
 use App\Models\Funcionario;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
@@ -14,7 +15,7 @@ class FuncionarioController extends Controller
 {
 
     public function __construct(
-        protected FuncionarioContract $func
+        protected FuncionarioContract $funcService
     ) {
     }
 
@@ -23,7 +24,11 @@ class FuncionarioController extends Controller
      */
     public function index()
     {
-        //
+        $page_size = request('page_size') ?? 10;
+
+        $funcs = $this->funcService->all($page_size);
+
+        return response()->json($funcs);
     }
 
     /**
@@ -37,9 +42,9 @@ class FuncionarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Funcionario $funcionario)
+    public function show(Funcionario $func)
     {
-        //
+        return response()->json($func);
     }
 
     /**
@@ -49,7 +54,18 @@ class FuncionarioController extends Controller
     {
         Gate::authorize('update-func', $func);
 
-        $updated = $this->func->update($request->validated(), $func);
+        $email = $func->user->email;
+
+        $updated = $this->funcService->update($request->validated(), $func);
+
+        $user = $updated->user;
+        
+        if (
+            $email !== $request['email'] &&
+            $user instanceof MustVerifyEmail
+        ) {
+            $user->sendEmailVerificationNotification();
+        }
 
         return response()->json($updated);
     }
@@ -63,7 +79,7 @@ class FuncionarioController extends Controller
 
         $user = $func->user();
 
-        $this->func->delete($user);
+        $this->funcService->delete($user);
 
         return response()->json([], 204);
     }

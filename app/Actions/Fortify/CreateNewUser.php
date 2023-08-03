@@ -2,14 +2,8 @@
 
 namespace App\Actions\Fortify;
 
-use App\Contracts\Services\AdministradorContract;
-use App\Contracts\Services\FuncionarioContract;
-use App\Http\Requests\StoreUpdateUserRequest;
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
+use App\Contracts\Services\UserContract;
+
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 
 class CreateNewUser implements CreatesNewUsers
@@ -25,29 +19,9 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
 
-        return DB::transaction(function () use ($input) {
+        $user = app(UserContract::class);
 
-            $admin = app(AdministradorContract::class);
-            $func = app(FuncionarioContract::class);
-
-            $user = User::create([
-                'email' => $input['email'],
-                'password' => Hash::make($input['password']),
-            ]);
-
-            $user->roles()->sync($input['role_id']);
-
-            $input['user_id'] = $user->id;
-
-            if ($user->isAdmin()) {
-                $admin->create($input);
-
-            } else {
-               $func->create($input);
-            }
-
-
-        });
-
+        return $user->create($input);
+       
     }
 }

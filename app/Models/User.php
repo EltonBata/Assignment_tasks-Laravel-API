@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Administrador;
 use App\Models\Funcionario;
 use App\Models\Role;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -66,10 +65,6 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(Funcionario::class);
     }
 
-    public function administrador()
-    {
-        return $this->hasOne(Administrador::class);
-    }
 
     public function roles()
     {

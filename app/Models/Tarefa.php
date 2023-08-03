@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Administrador;
 use App\Models\Etapa;
 use App\Models\Funcionario;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -35,7 +34,7 @@ class Tarefa extends Model
 
     public function administrador()
     {
-        return $this->belongsTo(Administrador::class, 'administrador_id');
+        return $this->belongsTo(Funcionario::class, 'administrador_id');
     }
 
     public function etapas(){

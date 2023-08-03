@@ -42,4 +42,9 @@ class Funcionario extends Model
     {
         return $this->hasMany(Etapa::class);
     }
+
+    public function tarefasCreated()
+    {
+        return $this->hasMany(Tarefa::class, 'administrador_id');
+    }
 }

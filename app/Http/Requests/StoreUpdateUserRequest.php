@@ -38,12 +38,6 @@ class StoreUpdateUserRequest extends FormRequest
     public function rules(): array
     {
 
-        if(Route::current()->getControllerClass() === FuncionarioController::class){
-            $user_id = Route::current()->parameter('func')->user_id;
-        }else{
-            $user_id = $this->user()->id;
-        }
-
         $rules = [
             'nome' => ['required', 'max:255', 'string'],
             'apelido' => ['required', 'max:255', 'string'],
@@ -62,6 +56,13 @@ class StoreUpdateUserRequest extends FormRequest
         ];
 
         if ($this->method() === 'PUT') {
+
+            if (Route::current()->getControllerClass() === FuncionarioController::class) {
+                $user_id = Route::current()->parameter('func')->user_id;
+            } else {
+                $user_id = $this->user()->id;
+            }
+
             $rules['email'] = [
                 'required',
                 'string',
