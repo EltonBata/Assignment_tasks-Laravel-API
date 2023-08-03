@@ -3,7 +3,7 @@
 namespace App\Actions\Fortify;
 
 use App\Contracts\Services\UserContract;
-
+use Illuminate\Support\Facades\Gate;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 
 class CreateNewUser implements CreatesNewUsers
@@ -18,6 +18,7 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
+        Gate::authorize('create-user', User::class);
 
         $user = app(UserContract::class);
 

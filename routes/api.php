@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\AdministradorController;
 use App\Http\Controllers\Api\FuncionarioController;
+use App\Http\Controllers\Api\RoleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +21,10 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::apiResource('/funcs', FuncionarioController::class)
         ->except('store')
         ->names('funcs');
+
+    Route::apiResource('/roles', RoleController::class)
+        ->except('show')
+        ->names('roles');
 
 });
 

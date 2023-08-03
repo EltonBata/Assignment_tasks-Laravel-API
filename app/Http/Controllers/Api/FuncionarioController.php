@@ -31,14 +31,7 @@ class FuncionarioController extends Controller
         return response()->json($funcs);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
+    
     /**
      * Display the specified resource.
      */

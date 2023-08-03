@@ -33,6 +33,11 @@ abstract class Repository
         return $create;
     }
 
-    public function update(array $data, $model){}
-   
+    public function update(array $data, $model)
+    {
+        $model->update($data);
+
+        return $model;
+    }
+
 }
