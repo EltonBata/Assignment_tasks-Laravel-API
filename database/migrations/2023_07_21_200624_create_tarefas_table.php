@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('tarefas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('administrador_id');
-            $table->foreign('administrador_id')->references('id')->on('administradores');
+            $table->foreign('administrador_id')->references('id')->on('administradores')->cascadeOnDelete();
             $table->unsignedBigInteger('supervisor_id');
             $table->foreign('supervisor_id')->references('id')->on('funcionarios');
             $table->foreignId('funcionario_id')->constrained();

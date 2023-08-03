@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('supervisoes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('funcionario_id')->constrained();
+            $table->foreignId('funcionario_id')->constrained()->cascadeOnDelete();
             $table->text('avaliacao')->nullable();
             $table->timestamps();
         });

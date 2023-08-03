@@ -16,32 +16,28 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        
+        Role::factory(5)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-        Administrador::factory()
-            ->for(User::factory()
-                ->hasRoles(1, [
-                    'nome' => 'admin',
-                    'descricao' => 'Este e um admin',
-                ], '')
-                ->create([
-                    'email' => 'eltonbata@gmail.com',
-                    'password' => bcrypt(12345678),
-                ]))
-            ->create(
-                [
-                    'nome' => 'Elton Vagner',
-                    'apelido' => 'Bata',
-                    'data_nascimento' => '2002-12-14',
-                    'email' => 'elton@gmail.com',
-                    'endereco' => 'Maputo, Cidade da Matola, Intaka',
-                    'telefone' => '879030182'
-                ]
-            );
+        // Administrador::factory()
+        //     ->for(User::factory()
+        //         ->hasRoles(1, [
+        //             'nome' => 'admin',
+        //             'descricao' => 'Este e um admin',
+        //         ], '')
+        //         ->create([
+        //             'email' => 'eltonbata@gmail.com',
+        //             'password' => bcrypt(12345678),
+        //         ]))
+        //     ->create(
+        //         [
+        //             'nome' => 'Elton Vagner',
+        //             'apelido' => 'Bata',
+        //             'data_nascimento' => '2002-12-14',
+        //             'email' => 'elton@gmail.com',
+        //             'endereco' => 'Maputo, Cidade da Matola, Intaka',
+        //             'telefone' => '879030182'
+        //         ]
+        //     );
     }
 }

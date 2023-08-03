@@ -37,14 +37,13 @@ class CreateNewUser implements CreatesNewUsers
                 'password' => Hash::make($input['password']),
             ]);
 
-            $user->roles()->sync([$input['role_id']]);
+            $user->roles()->sync($input['role_id']);
 
             $input['user_id'] = $user->id;
 
             if ($user->isAdmin()) {
                 $admin = $admin->create($input);
 
-                return response()->redirectToRoute('admin.show', [$admin->id]);
             }
 
             
