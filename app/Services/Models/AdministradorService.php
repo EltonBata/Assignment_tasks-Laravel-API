@@ -10,9 +10,4 @@ class AdministradorService extends Service implements AdministradorContract
 
     protected $repository = AdministradorRepository::class;
 
-    public function create(array $data)
-    {
-        return $this->repository->create($data);
-    }
-
 }

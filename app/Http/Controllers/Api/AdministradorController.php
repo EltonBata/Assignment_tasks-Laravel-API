@@ -44,7 +44,9 @@ class AdministradorController extends Controller
     {
         Gate::authorize('delete-admin', $admin);
 
-        $admin->user()->delete();
+        $user = $admin->user();
+
+        $this->admin->delete($user);
 
         return response()->json([], 204);
     }

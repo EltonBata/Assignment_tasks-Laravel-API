@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('endereco');
             $table->string('email');
             $table->string('telefone');
-            $table->char('genero');
             $table->timestamps();
         });
     }

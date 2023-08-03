@@ -3,9 +3,12 @@
 namespace App\Http\Requests;
 
 use App\Actions\Fortify\PasswordValidationRules;
+use App\Http\Controllers\Api\FuncionarioController;
+use App\Models\Funcionario;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Rules\Password;
 
@@ -34,6 +37,13 @@ class StoreUpdateUserRequest extends FormRequest
      */
     public function rules(): array
     {
+
+        if(Route::current()->getControllerClass() === FuncionarioController::class){
+            $user_id = Route::current()->parameter('func')->user_id;
+        }else{
+            $user_id = $this->user()->id;
+        }
+
         $rules = [
             'nome' => ['required', 'max:255', 'string'],
             'apelido' => ['required', 'max:255', 'string'],
@@ -56,7 +66,7 @@ class StoreUpdateUserRequest extends FormRequest
                 'required',
                 'string',
                 'email',
-                Rule::unique(User::class, 'email')->ignore(auth()->user()),
+                Rule::unique(User::class, 'email')->ignore($user_id, 'id'),
             ];
 
             $rules['password'] = ['nullable'];
@@ -64,4 +74,5 @@ class StoreUpdateUserRequest extends FormRequest
 
         return $rules;
     }
+    
 }

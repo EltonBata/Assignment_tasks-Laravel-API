@@ -3,6 +3,7 @@
 namespace App\Actions\Fortify;
 
 use App\Contracts\Services\AdministradorContract;
+use App\Contracts\Services\FuncionarioContract;
 use App\Http\Requests\StoreUpdateUserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -15,10 +16,6 @@ class CreateNewUser implements CreatesNewUsers
 {
     use PasswordValidationRules;
 
-    public function __construct(
-        protected AdministradorContract $adminService
-    ) {
-    }
 
     /**
      * Validate and create a newly registered user.
@@ -28,10 +25,11 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
 
-        $admin = $this->adminService;
-        // $admin = app(AdministradorContract::class);
+        return DB::transaction(function () use ($input) {
 
-        return DB::transaction(function () use ($input, $admin) {
+            $admin = app(AdministradorContract::class);
+            $func = app(FuncionarioContract::class);
+
             $user = User::create([
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
@@ -42,11 +40,13 @@ class CreateNewUser implements CreatesNewUsers
             $input['user_id'] = $user->id;
 
             if ($user->isAdmin()) {
-                $admin = $admin->create($input);
+                $admin->create($input);
 
+            } else {
+               $func->create($input);
             }
 
-            
+
         });
 
     }
