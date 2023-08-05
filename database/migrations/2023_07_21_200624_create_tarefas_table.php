@@ -16,14 +16,13 @@ return new class extends Migration {
             $table->foreign('administrador_id')->references('id')->on('funcionarios')->cascadeOnDelete();
             $table->unsignedBigInteger('supervisor_id');
             $table->foreign('supervisor_id')->references('id')->on('funcionarios');
-            $table->foreignId('funcionario_id')->constrained();
             $table->string('designacao');
             $table->text('descricao');
             $table->dateTime('inicio');
             $table->dateTime('fim');
             $table->string('local')->nullable();
             $table->string('estado')->default('Em Progresso');
-            $table->string('classificacao');
+            $table->string('classificacao')->nullable();
             $table->integer('progresso')->default(0);
             $table->timestamps();
         });

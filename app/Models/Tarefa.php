@@ -12,6 +12,8 @@ class Tarefa extends Model
     use HasFactory;
 
     protected $fillable = [
+        'supervisor_id',
+        'administrador_id',
         'designacao',
         'descricao',
         'inicio',
@@ -19,6 +21,7 @@ class Tarefa extends Model
         'local',
         'estado',
         'classificacao',
+        'progresso'
     ];
 
     //Relacionamentos

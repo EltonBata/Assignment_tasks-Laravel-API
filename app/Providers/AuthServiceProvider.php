@@ -6,6 +6,7 @@ namespace App\Providers;
 
 
 use App\Models\Funcionario;
+use App\Models\Tarefa;
 use App\Models\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
@@ -26,9 +27,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Gate::define('create-user', fn(User $user) => $user->isAdmin());
-
-        Gate::define('create-role', fn(User $user) => $user->isAdmin());
+        Gate::define('create-resource', fn(User $user) => $user->isAdmin());
 
         Gate::define('update-role', fn(User $user) => $user->isAdmin());
 
@@ -45,5 +44,19 @@ class AuthServiceProvider extends ServiceProvider
             return $user->id === $funcionario->user_id || $user->isAdmin();
 
         });
+
+        Gate::define('update_task', function(User $user, Tarefa $task){
+
+            return $user->isAdmin() || in_array($user->id, $task->funcionarios()->allRelatedIds()->toArray());
+
+        });
+
+        Gate::define('show_task', function (User $user, Tarefa $task) {
+
+            return $user->isAdmin() || in_array($user->id, $task->funcionarios()->allRelatedIds()->toArray());
+
+        });
+
+        
     }
 }

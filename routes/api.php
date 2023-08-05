@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\FuncionarioController;
 use App\Http\Controllers\Api\RoleController;
+use App\Http\Controllers\Api\TarefaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,9 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::apiResource('/roles', RoleController::class)
         ->except('show')
         ->names('roles');
+
+    Route::apiResource('/tasks', TarefaController::class)
+        ->names('tasks');
 
 });
 

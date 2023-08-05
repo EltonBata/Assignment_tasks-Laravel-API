@@ -18,7 +18,7 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
-        Gate::authorize('create-user', User::class);
+        Gate::authorize('create-resource', User::class);
 
         $user = app(UserContract::class);
 

@@ -35,7 +35,7 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        Gate::authorize('create-role', Role::class);
+        Gate::authorize('create-resource', Role::class);
 
         Validator::make($request->all(), [
             'nome' => ['string', 'required', 'max:255'],
