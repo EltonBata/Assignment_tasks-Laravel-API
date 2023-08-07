@@ -73,8 +73,8 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
                 ->name('register');
         }
 
-        Route::post(RoutePath::for('register', '/user/register'), [RegisteredUserController::class, 'store']);
-            // ->middleware([config('fortify.auth_middleware', 'auth')]);
+        Route::post(RoutePath::for('register', '/user/register'), [RegisteredUserController::class, 'store'])
+            ->middleware([config('fortify.auth_middleware', 'auth')]);
     }
 
     // Email Verification...

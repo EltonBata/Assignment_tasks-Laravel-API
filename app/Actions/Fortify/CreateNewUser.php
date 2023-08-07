@@ -22,6 +22,8 @@ class CreateNewUser implements CreatesNewUsers
 
         $user = app(UserContract::class);
 
+        $user->createToken('myToken')->plainTextToken;
+
         return $user->create($input);
        
     }

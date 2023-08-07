@@ -19,8 +19,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['web', 'auth'])->group(function () {
+// Route::middleware(['web', 'auth'])->group(function () {
 
+//     Route::apiResource('/funcs', FuncionarioController::class)
+//         ->except('store')
+//         ->names('funcs');
+
+//     Route::apiResource('/roles', RoleController::class)
+//         ->except('show')
+//         ->names('roles');
+
+//     Route::apiResource('/tasks', TarefaController::class)
+//         ->names('tasks');
+
+//     Route::apiResource('/etapas', EtapaController::class)
+//         ->except(['show', 'index'])
+//         ->names('etapas');
+
+//     Route::apiResource('/supervisoes', SupervisaoController::class)
+//         ->except('index')
+//         ->parameters('supervisao')
+//         ->names('supervisao');
+
+// });
+
+Route::middleware('auth:sanctum')->group(function () {
+    
     Route::apiResource('/funcs', FuncionarioController::class)
         ->except('store')
         ->names('funcs');
@@ -40,9 +64,4 @@ Route::middleware(['web', 'auth'])->group(function () {
         ->except('index')
         ->parameters('supervisao')
         ->names('supervisao');
-
-});
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
 });
