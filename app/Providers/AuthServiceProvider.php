@@ -4,7 +4,7 @@ namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
 
-
+use App\Models\Etapa;
 use App\Models\Funcionario;
 use App\Models\Tarefa;
 use App\Models\User;
@@ -45,9 +45,15 @@ class AuthServiceProvider extends ServiceProvider
 
         });
 
-        Gate::define('update_task', function(User $user, Tarefa $task){
+        Gate::define('update_task', function (User $user, Tarefa $task) {
 
-            return $user->isAdmin() || in_array($user->id, $task->funcionarios()->allRelatedIds()->toArray());
+            return $user->id === $task->administrador_id || in_array($user->id, $task->funcionarios()->allRelatedIds()->toArray());
+
+        });
+
+        Gate::define('delete_task', function (User $user, Tarefa $task) {
+
+            return $user->id === $task->administrador_id;
 
         });
 
@@ -57,6 +63,14 @@ class AuthServiceProvider extends ServiceProvider
 
         });
 
-        
+        Gate::define('etapa', function (User $user, $tarefa) {
+            return in_array($tarefa, $user->funcionario->tarefas()->allRelatedIds()->toArray());
+        });
+
+        Gate::define('supervisao', function (User $user, $tarefa) {
+            return $user->isSupervisor($tarefa);
+        });
+
+
     }
 }

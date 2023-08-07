@@ -12,6 +12,8 @@ class Etapa extends Model
     use HasFactory;
 
     protected $fillable = [
+        'tarefa_id',
+        'funcionario_id',
         'designacao',
         'descricao'
     ];

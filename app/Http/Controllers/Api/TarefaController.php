@@ -77,6 +77,8 @@ class TarefaController extends Controller
      */
     public function destroy(Tarefa $task)
     {
+        Gate::authorize('delete_task', $task);
+
         $this->tarefaService->delete($task);
 
         return response()->json([], 204);

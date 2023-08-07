@@ -59,6 +59,19 @@ class User extends Authenticatable implements MustVerifyEmail
         return $isAdmin;
     }
 
+    public function isSupervisor($id){
+        
+        $tarefa = Tarefa::find($id);
+
+        $user = $this->funcionario->id;
+
+        if($user === $tarefa->supervisor_id){
+            return true;
+        }
+
+        return false;
+    }
+
     //Relacionamentos
     public function funcionario()
     {
