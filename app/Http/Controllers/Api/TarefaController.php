@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Contracts\Services\TarefaContract;
+use App\Facades\Contracts\TarefaFacade;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateTarefaRequest;
 use App\Models\Tarefa;
@@ -12,12 +13,6 @@ use Illuminate\Support\Facades\Gate;
 class TarefaController extends Controller
 {
 
-    public function __construct(
-        protected TarefaContract $tarefaService
-    ) {
-
-    }
-
     /**
      * Display a listing of the resource.
      */
@@ -25,7 +20,7 @@ class TarefaController extends Controller
     {
         $page_size = request('page_size') ?? 10;
 
-        $tarefas = $this->tarefaService->all($page_size);
+        $tarefas = TarefaFacade::all($page_size);
 
         return response()->json($tarefas);
     }
@@ -37,7 +32,7 @@ class TarefaController extends Controller
     {
         Gate::authorize('create-resource', Tarefa::class);
 
-        $created = $this->tarefaService->create($request->validated());
+        $created = TarefaFacade::create($request->validated());
 
         return response()->json($created);
     }
@@ -67,7 +62,7 @@ class TarefaController extends Controller
             $data = $request->only(['estado', 'progresso']);
         }
 
-        $updatedTarefa = $this->tarefaService->update($data, $task);
+        $updatedTarefa = TarefaFacade::update($data, $task);
 
         return response()->json($updatedTarefa);
     }
@@ -79,7 +74,7 @@ class TarefaController extends Controller
     {
         Gate::authorize('delete_task', $task);
 
-        $this->tarefaService->delete($task);
+        TarefaFacade::delete($task);
 
         return response()->json([], 204);
     }

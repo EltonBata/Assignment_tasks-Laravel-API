@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Contracts\Services\RoleContract;
+use App\Facades\Contracts\RoleFacade;
 use App\Http\Controllers\Controller;
 use App\Models\Role;
 use Illuminate\Http\Request;
@@ -12,12 +13,7 @@ use Illuminate\Support\Facades\Validator;
 class RoleController extends Controller
 {
 
-    public function __construct(
-        protected RoleContract $roleService
-    ) {
-
-    }
-
+    
     /**
      * Display a listing of the resource.
      */
@@ -25,7 +21,7 @@ class RoleController extends Controller
     {
         $page_size = request('page_size') ?? 10;
 
-        $roles = $this->roleService->all($page_size);
+        $roles = RoleFacade::all($page_size);
 
         return response()->json($roles);
     }
@@ -42,7 +38,7 @@ class RoleController extends Controller
             'descricao' => ['string', 'required', 'max:512']
         ])->validate();
 
-        $created = $this->roleService->create($request->all());
+        $created = RoleFacade::create($request->all());
 
         return response()->json($created);
     }
@@ -62,7 +58,7 @@ class RoleController extends Controller
             'descricao' => ['string', 'required', 'max:512']
         ])->validate();
 
-        $updated = $this->roleService->update($request->all(), $role);
+        $updated = RoleFacade::update($request->all(), $role);
 
         return response()->json($updated);
     }
@@ -74,7 +70,7 @@ class RoleController extends Controller
     {
         Gate::authorize('delete-role', Role::class);
 
-        $this->roleService->delete($role);
+        RoleFacade::delete($role);
 
         return response()->json([], 204);
     }

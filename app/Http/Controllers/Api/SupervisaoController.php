@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Contracts\Services\SupervisaoContract;
+use App\Facades\Contracts\SupervisaoFacade;
 use App\Http\Requests\StoreUpdateSupervisaoRequest;
 use App\Models\Supervisao;
 use Illuminate\Http\Request;
@@ -11,10 +12,6 @@ use Illuminate\Support\Facades\Gate;
 
 class SupervisaoController extends Controller
 {
-    public function __construct(
-        protected SupervisaoContract $supervisaoService
-    ) {
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -24,7 +21,7 @@ class SupervisaoController extends Controller
 
         Gate::authorize('supervisao', $request->tarefa_id);
 
-        $created = $this->supervisaoService->create($request->validated());
+        $created = SupervisaoFacade::create($request->validated());
 
         return response()->json($created);
     }
@@ -44,7 +41,7 @@ class SupervisaoController extends Controller
     {
         Gate::authorize('supervisao', $request->tarefa_id);
 
-        $updated = $this->supervisaoService->update($request->validated(), $superviso);
+        $updated = SupervisaoFacade::update($request->validated(), $superviso);
 
         return response()->json($updated);
 
@@ -57,7 +54,7 @@ class SupervisaoController extends Controller
     {
         Gate::authorize('supervisao', $superviso->tarefa_id);
 
-        $this->supervisaoService->delete($superviso);
+        SupervisaoFacade::delete($superviso);
 
         return response()->json([], 204);
     }

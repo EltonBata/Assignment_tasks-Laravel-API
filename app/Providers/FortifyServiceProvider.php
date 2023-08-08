@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Contracts\LoginResponse as ContractsLoginResponse;
+use Laravel\Fortify\Contracts\LogoutResponse as LogoutResponseContract;
 use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Http\Responses\LoginResponse;
+use Laravel\Fortify\Http\Responses\LogoutResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -27,7 +29,7 @@ class FortifyServiceProvider extends ServiceProvider
 
             public function toResponse($request)
             {
-                if($request->wantsJson()){
+                if ($request->wantsJson()) {
                     $user = User::where('email', $request->email)->first();
 
                     $token = $user->createToken($request->email)->plainTextToken;
@@ -38,6 +40,16 @@ class FortifyServiceProvider extends ServiceProvider
                     ], 200);
                 }
                 return redirect()->intended(Fortify::redirects('login'));
+            }
+        });
+
+        $this->app->instance(LogoutResponse::class, new class implements LogoutResponseContract {
+
+            public function toResponse($request)
+            {
+                return response()->json([
+                    'message' => 'Logout feito',
+                ]);
             }
         });
     }

@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Contracts\Services\FuncionarioContract;
+use App\Facades\Contracts\FuncionarioFacade;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateUserRequest;
 use App\Models\Funcionario;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
 class FuncionarioController extends Controller
 {
 
-    public function __construct(
-        protected FuncionarioContract $funcService
-    ) {
-    }
 
     /**
      * Display a listing of the resource.
@@ -26,7 +20,7 @@ class FuncionarioController extends Controller
     {
         $page_size = request('page_size') ?? 10;
 
-        $funcs = $this->funcService->all($page_size);
+        $funcs = FuncionarioFacade::all($page_size);
 
         return response()->json($funcs);
     }
@@ -49,7 +43,7 @@ class FuncionarioController extends Controller
 
         $email = $func->user->email;
 
-        $updated = $this->funcService->update($request->validated(), $func);
+        $updated = FuncionarioFacade::update($request->validated(), $func);
 
         $user = $updated->user;
         
@@ -72,7 +66,7 @@ class FuncionarioController extends Controller
 
         $user = $func->user();
 
-        $this->funcService->delete($user);
+        FuncionarioFacade::delete($user);
 
         return response()->json([], 204);
     }

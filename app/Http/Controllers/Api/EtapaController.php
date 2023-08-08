@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Contracts\Services\EtapaContract;
+use App\Facades\Contracts\EtapaFacade;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateEtapaRequest;
 use App\Models\Etapa;
@@ -12,11 +13,6 @@ use Illuminate\Support\Facades\Gate;
 class EtapaController extends Controller
 {
 
-    public function __construct(
-        protected EtapaContract $etapaService
-    ) {
-    }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -24,7 +20,7 @@ class EtapaController extends Controller
     {
         Gate::authorize('etapa', $request->tarefa_id);
 
-        $createdEtapa = $this->etapaService->create($request->validated());
+        $createdEtapa = EtapaFacade::create($request->validated());
 
         return response()->json($createdEtapa);
     }
@@ -37,7 +33,7 @@ class EtapaController extends Controller
     {
         Gate::authorize('etapa', $request->tarefa_id);
 
-        $updated = $this->etapaService->update($request->validated(), $etapa);
+        $updated = EtapaFacade::update($request->validated(), $etapa);
 
         return response()->json($updated);
     }
@@ -49,7 +45,7 @@ class EtapaController extends Controller
     {
         Gate::authorize('etapa', $etapa->tarefa_id);
 
-        $this->etapaService->delete($etapa);
+        EtapaFacade::delete($etapa);
 
         return response()->json([], 204);
 
