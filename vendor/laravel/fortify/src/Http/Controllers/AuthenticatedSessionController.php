@@ -98,7 +98,7 @@ class AuthenticatedSessionController extends Controller
     public function destroy(Request $request): LogoutResponse
     {
 
-        auth()->user()->tokens()->delete();
+        //auth()->user()->tokens()->delete();
 
         $this->guard->logout();
 

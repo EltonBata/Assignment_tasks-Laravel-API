@@ -29,17 +29,15 @@ class FortifyServiceProvider extends ServiceProvider
 
             public function toResponse($request)
             {
-                if ($request->wantsJson()) {
-                    $user = User::where('email', $request->email)->first();
+                $user = User::where('email', $request->email)->first();
 
-                    $token = $user->createToken($request->email)->plainTextToken;
+                $token = $user->createToken($request->email)->plainTextToken;
 
-                    return response()->json([
-                        'message' => 'Usuario logado',
-                        'token' => $token
-                    ], 200);
-                }
-                return redirect()->intended(Fortify::redirects('login'));
+                return response()->json([
+                    'message' => 'Usuario logado',
+                    'token' => $token
+                ], 200);
+
             }
         });
 

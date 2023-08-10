@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\FuncionarioController;
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\SupervisaoController;
 use App\Http\Controllers\Api\TarefaController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,32 +20,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware(['web', 'auth'])->group(function () {
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
-//     Route::apiResource('/funcs', FuncionarioController::class)
-//         ->except('store')
-//         ->names('funcs');
+Route::middleware(['auth:api'])->group(function () {
 
-//     Route::apiResource('/roles', RoleController::class)
-//         ->except('show')
-//         ->names('roles');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-//     Route::apiResource('/tasks', TarefaController::class)
-//         ->names('tasks');
-
-//     Route::apiResource('/etapas', EtapaController::class)
-//         ->except(['show', 'index'])
-//         ->names('etapas');
-
-//     Route::apiResource('/supervisoes', SupervisaoController::class)
-//         ->except('index')
-//         ->parameters('supervisao')
-//         ->names('supervisao');
-
-// });
-
-Route::middleware('auth:sanctum')->group(function () {
-    
     Route::apiResource('/funcs', FuncionarioController::class)
         ->except('store')
         ->names('funcs');
